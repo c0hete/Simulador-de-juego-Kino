@@ -12,5 +12,7 @@ router.get('/', function(req, res) {
     res.render('index', data);
   });
 
+  
+
   // Exportar el router
 module.exports = router;
