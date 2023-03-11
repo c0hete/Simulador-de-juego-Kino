@@ -32,7 +32,7 @@ Para utilizar la aplicación, se deben seguir los siguientes pasos:
 
 bash
 
-git clone https://github.com/usuario/nombre-del-repositorio.git
+git clone https://github.com/c0hete/Simulador-de-juego-Kino.git
 
     Instalar las dependencias:
 
