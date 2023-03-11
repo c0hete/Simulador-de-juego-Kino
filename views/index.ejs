@@ -24,7 +24,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#"><%= title %></a>
+              <a class="nav-link" href="/cartones/crear#">Empieza a jugar!</a> 
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"><%= message %></a>
@@ -38,8 +38,10 @@
     </nav>
     <!-- Agregamos el container -->
     <div class="container mt-5 text-center">
-      <h1><%= title %></h1>
-      <img class="img" src="\img\EXLgbv0VAAYCvy-.jpg" alt="Descripción de la imagen">
+      <img class="img" src="/img/Darth.png" alt="Descripción de la imagen">
+      <form method="POST" action="/cartones/crear">
+        <button onclick="generarCarton()">Generar nuevo cartón</button>
+      </form>
       <p><%= message %></p>
       <a href="/cartones/crear">Crear nuevo cartón</a>
       <a href="/cartones/listado">Listado de cartones</a>

@@ -9,21 +9,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Indica que usaremos EJS como motor de plantillas
 app.set('view engine', 'ejs'); 
 
-// Importar rutas de cartones
-const cartonesRouter = require('./routes/cartones');
+app.use(express.urlencoded({ extended: true }));
+// Rutas de cartones
+const cartonesRoute = require('./routes/cartonesRoute');
+
+//Rutas de plantillas
+const indexRouter = require('./routes/index');
 
 // Se utiliza el router de cartones
-app.use('/cartones', cartonesRouter);
-
-
-
-app.get('/', function(req, res) {
-  const data = {
-    title: 'Kino',
-    message: '¡Atrevete a ganar!'
-  };
-  res.render('index', data);
-});
+app.use('/cartones', cartonesRoute);
+app.use('/', indexRouter);
 
 
 app.listen(PORT,()=>{

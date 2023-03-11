@@ -47,6 +47,5 @@ router.post('/resetear', (req, res) => {
   res.redirect('/cartones/listado');
 });
 
-
 // Exportar el router
 module.exports = router;

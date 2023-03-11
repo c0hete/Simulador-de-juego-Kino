@@ -7,7 +7,7 @@ router.use(express.urlencoded({ extended: true }));
 router.get('/', function(req, res) {
     const data = {
       title: 'Darth Kino',
-      message: '¡Atrevete a ganar!'
+      message: '¡El lado oscuro de las apuestas!'
     };
     res.render('index', data);
   });
