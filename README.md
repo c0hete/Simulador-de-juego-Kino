@@ -1,6 +1,19 @@
 Proyecto de lotería Kino
 
-Este proyecto consiste en un servicio web que administra cartones para un juego de lotería estilo Kino, y una interfaz de usuario básica para consumir este servicio web.
+Este proyecto consiste en una aplicación para generar cartones de bingo y mostrarlos en una página web. La aplicación cuenta con las siguientes funcionalidades:
+Funcionalidades
+1. Crear un nuevo cartón de bingo
+
+Se puede crear un nuevo cartón de bingo mediante el controlador crearCarton. Este controlador genera números aleatorios sin repetir para el cartón, así como un número de serie aleatorio. Si ya hay cartones creados, solo se generará un cartón, en caso contrario se generarán 5 cartones. Además, se generan 15 números ganadores aleatorios y se redirige al listado de cartones.
+2. Mostrar el listado de cartones
+
+El controlador mostrarListado se encarga de mostrar el listado de cartones. Si no se han creado cartones todavía, se redirige al formulario de creación de cartones. En caso contrario, se obtienen los últimos números ganadores desde el último cartón agregado y se muestran junto a la lista de cartones.
+3. Mostrar formulario de creación de cartones
+
+El controlador mostrarFormularioCrear muestra el formulario para crear un nuevo cartón.
+4. Resetear los cartones
+
+Se puede resetear la aplicación y vaciar el arreglo de cartones y ganadores mediante el controlador resetearCartones. Este controlador redirige al formulario de creación de cartones.
 Tecnologías utilizadas
 
     Node.js
@@ -9,30 +22,37 @@ Tecnologías utilizadas
     HTML
     CSS
     JavaScript
+    Bootstrap
 
-Requisitos
+Instalación y uso
 
-    Node.js instalado en el sistema
+Para utilizar la aplicación, se deben seguir los siguientes pasos:
 
-Instalación
+    Clonar el repositorio:
 
-    Clonar este repositorio en tu máquina local
-    Navegar hasta la carpeta raíz del proyecto
-    Ejecutar el comando npm install en la terminal para instalar las dependencias
+bash
 
-Uso
+git clone https://github.com/usuario/nombre-del-repositorio.git
 
-    Ejecutar el comando npm start en la terminal para iniciar el servidor
-    Abrir un navegador web y dirigirse a http://localhost:4000
-    En la página principal, se puede navegar hacia el listado de cartones o la página de creación de un nuevo cartón
-    En el listado de cartones, se pueden visualizar todos los cartones generados por el servicio web
-    En la página de creación de un nuevo cartón, se debe ingresar un número de serie único para el cartón y hacer clic en el botón "Generar Cartón" para crear un nuevo cartón
+    Instalar las dependencias:
 
-Rutas
+bash
 
-    /: Página principal con enlaces a la lista de cartones y página de creación de un nuevo cartón
-    /cartones: Listado completo de todos los cartones generados
-    /cartones/nuevo: Página para crear un nuevo cartón
+cd nombre-del-repositorio
+npm install
+
+    Iniciar la aplicación:
+
+bash
+
+npm start
+
+    Acceder a la aplicación en el navegador:
+
+bash
+
+http://localhost:4000/cartones/crear
+
 
 Créditos
 
