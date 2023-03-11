@@ -15,6 +15,8 @@ const cartonesRouter = require('./routes/cartones');
 // Se utiliza el router de cartones
 app.use('/cartones', cartonesRouter);
 
+
+
 app.get('/', function(req, res) {
   const data = {
     title: 'Kino',
@@ -22,7 +24,7 @@ app.get('/', function(req, res) {
   };
   res.render('index', data);
 });
-  
+
 
 app.listen(PORT,()=>{
     console.log(`Servidor sacando chispas en el puerto ${PORT}`)

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/nav_footer.css">
     <link rel="stylesheet" href="/css/index.css">
     <title><%= title %></title>
      <!-- archivo CSS de Bootstrap -->
@@ -13,9 +14,10 @@
 </head>
 <body>
     <!-- navbar -->
+    <div class="site-content">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
-        <a class="navbar-brand" href="#"><%= message %></a>
+        <a class="navbar-brand" href="/"><%= message %></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,13 +37,19 @@
       </div>
     </nav>
     <!-- Agregamos el container -->
-    <div class="container mt-5">
+    <div class="container mt-5 text-center">
       <h1><%= title %></h1>
+      <img class="img" src="\img\EXLgbv0VAAYCvy-.jpg" alt="Descripción de la imagen">
       <p><%= message %></p>
+      <a href="/cartones/crear">Crear nuevo cartón</a>
+      <a href="/cartones/listado">Listado de cartones</a>
     </div>
-    <!-- Agregamos el footer -->
-    <div class="footer">
-      <p>Todos los derechos reservados &copy; 2023</p>
-    </div>
+    <!-- footer -->
+    <div class="footer-container">
+      <footer class="footer">
+      <p>José Alvarado. Todos los derechos reservados &copy; 2023</p>
+    </footer>
+    <div>
   </body>
+</div>
 </html>

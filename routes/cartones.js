@@ -39,5 +39,14 @@ router.get('/listado', (req, res) => {
   res.render('listado', { cartones });
 });
 
+router.post('/resetear', (req, res) => {
+  // Vaciar el arreglo de cartones
+  cartones.length = 0;
+
+  // Redirigir al listado de cartones vacío
+  res.redirect('/cartones/listado');
+});
+
+
 // Exportar el router
 module.exports = router;

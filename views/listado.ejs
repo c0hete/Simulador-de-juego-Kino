@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/listado.css">
+    <link rel="stylesheet" href="/css/nav_footer.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="/">QUE LA SUERTE TE ACOMPAÑE</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <h1>Listado de cartones</h1>
+   <!-- div contenedor cartones -->
+<div class="cartones-container">
+    <% cartones.forEach(function(carton) { %>
+      <div class="carton">
+        <!-- número de serie del cartón -->
+        <h3><%= carton.serie %></h3>
+        <!-- números en una tabla de 3x5 -->
+        <table>
+          <tbody>
+            <% for(let i = 0; i < 5; i++) { %>
+              <tr>
+                <% for(let j = 0; j < 3; j++) { %>
+                  <td><%= carton.numeros[i*3 + j] %></td>
+                <% } %>
+              </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    <% }); %>
+  </div>
+  <form action="/cartones/resetear" method="POST">
+    <button type="submit">Resetear cartones</button>
+  </form>
+  
+    <a href="/cartones/crear">Crear nuevo cartón</a>
+
+        <!-- footer -->
+        <footer class="footer">
+            <p>José Alvarado. Todos los derechos reservados &copy; 2023</p>
+          </footer>
+  </body>
+</html>
